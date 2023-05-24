@@ -97,6 +97,10 @@
             flex-flow:row wrap;
             justify-content:space-between;
         }
+        .flex-box img{
+            width:auto;
+            height:100%;
+        }
         .flex-box>*{
             width:100%;
         }
@@ -120,6 +124,27 @@
             width:2px;
             height:68px;
             background:#aaa;
+        }
+        .flex-box article{
+            margin-bottom:50px;
+        }
+        .flex-box article:last-of-type{
+            margin-bottom:0;
+        }
+        .flex-box article .img-box{
+            height:58px;
+            margin-bottom:2em;
+            text-align:center;
+        }
+        .flex-box article h3{
+            margin-bottom:1.4em;
+            text-align:center;
+        }
+        .flex-box article p{
+            font-size:14px;
+            line-height:23px;
+            color:#616161;
+            text-align:center;
         }
 
 
@@ -146,10 +171,11 @@
             .btn-nav{
                 display:none;
             }
-
             .flex-box article{
-                width:25%;     
+                width:calc(25% - 15px);
+                margin-bottom:0;
             }
+            
         }
 
         @media (min-width:1200px){
@@ -205,22 +231,22 @@
                 <article>
                     <div class="img-box"><img src="./images/promo01.png" alt="프로모션1"></div>
                     <h3>home</h3>
-                    <p class="lower-txt">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam, iure!</p>
+                    <p class="lower-txt serif">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam, iure!</p>
                 </article>
                 <article>
                     <div class="img-box"><img src="./images/promo02.png" alt="프로모션2"></div>
                     <h3>we are</h3>
-                    <p class="lower-txt">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam, iure!</p>
+                    <p class="lower-txt serif">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam, iure!</p>
                 </article>
                 <article>
                     <div class="img-box"><img src="./images/promo03.png" alt="프로모션3"></div>
                     <h3>work</h3>
-                    <p class="lower-txt">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam, iure!</p>
+                    <p class="lower-txt serif">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam, iure!</p>
                 </article>
                 <article>
                     <div class="img-box"><img src="./images/promo04.png" alt="프로모션4"></div>
                     <h3>blog</h3>
-                    <p class="lower-txt">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam, iure!</p>
+                    <p class="lower-txt serif">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam, iure!</p>
                 </article>
             </div>   
         </section>
