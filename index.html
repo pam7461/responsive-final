@@ -24,6 +24,9 @@
         h1,h2,h3,h4{
             text-transform:uppercase;
         }
+        .hide{
+            display:none;
+        }
 
         .wrap{            
             overflow:hidden;
@@ -57,7 +60,8 @@
             background:#3f51b5;
             color:#fff;
             overflow:hidden;
-            transition:0.3s;
+            transition-property:height;
+            transition-duration:0.3s;
         }
         nav.active{
             height:216px;
@@ -83,6 +87,38 @@
             background:#3f51b5;
             text-indent:-9999px;
         }
+
+        
+
+
+
+
+        @media (min-width:768px){
+            .header{
+                height:84px;
+            }
+            nav{
+                position:static;
+                height:auto;
+                background:transparent;
+                color:#3f51b5;
+            }
+            nav.active{
+                height:auto;
+            }
+            nav li{
+                display:inline;
+                padding:0 0 0 1em;
+                border-bottom:none;
+            }
+            .btn-nav{
+                display:none;
+            }
+        }
+
+        @media (min-width:1200px){
+
+        }
     </style>
 </head>
 <body>
@@ -103,7 +139,16 @@
             </div>
         </header>
         <section class="sec slider">
-            <h2>slider</h2>
+            <h2 class="hide">slider</h2>
+            <div class="img-box">
+                <a href="#">
+                    <picture>
+                        <source media="(min-width: )" srcset="">
+                        <source media="(min-width: )" srcset="">
+                        <img src="" alt="">
+                    </picture>
+                </a>
+            </div>
         </section>
         <section class="sec we-are">            
             <h2>we are</h2>            
