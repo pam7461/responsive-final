@@ -15,22 +15,23 @@
             font-weight:400;
             font-size:16px;
             color:#3f51b5;
-            line-height:1.4em;
+            /* line-height:1.4em; */
+            text-transform:uppercase;
+        }
+        .lower-txt{
+            text-transform:lowercase;
         }
         .serif{
             font-family:'PT serif',serif;
             color:#616161;
-        }
-        h1,h2,h3,h4{
-            text-transform:uppercase;
-        }
+        }        
         .hide{
             display:none;
         }
 
         .wrap{            
             overflow:hidden;
-            background:rgba(0,0,0,0.3);
+            /* background:rgba(0,0,0,0.3); */
         }
         .container{
             overflow:hidden;
@@ -87,8 +88,39 @@
             background:#3f51b5;
             text-indent:-9999px;
         }
-
-        
+        .we-are{
+            border-bottom:1px solid #aaa;
+            padding:60px 20px;
+        }
+        .flex-box{
+            display:flex;
+            flex-flow:row wrap;
+            justify-content:space-between;
+        }
+        .flex-box>*{
+            width:100%;
+        }
+        .flex-box h2{
+            margin-bottom:0.5em;
+            font-size:42px;
+            text-align:center;
+        }
+        .flex-box h2+p{
+            position:relative;
+            margin-bottom:60px;
+            text-align:center;
+            line-height:29px;
+        }
+        .flex-box h2+p::before{
+            position:absolute;
+            left:-25px;
+            top:10px;
+            content:'';
+            display:none;
+            width:2px;
+            height:68px;
+            background:#aaa;
+        }
 
 
 
@@ -114,10 +146,26 @@
             .btn-nav{
                 display:none;
             }
+
+            .flex-box article{
+                width:25%;     
+            }
         }
 
         @media (min-width:1200px){
-
+            .flex-box h2{
+                width:40%;
+                text-align:left;
+            }
+            .flex-box h2+p{                
+                width:60%;
+                /* padding-left:2em; */
+                /* border-left:1px solid #aaa; */
+                text-align:left;
+            }
+            .flex-box h2+p::before{
+                display:block;
+            }
         }
     </style>
 </head>
@@ -151,7 +199,30 @@
             </div>
         </section>
         <section class="sec we-are">            
-            <h2>we are</h2>            
+            <div class="container flex-box">
+                <h2>we are</h2>
+                <p class="lower-txt serif">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem, reiciendis facilis! Consectetur neque reiciendis, provident voluptatum aperiam minus! Blanditiis quod earum sint tempora voluptas ab illum labore at eos facilis!</p>
+                <article>
+                    <div class="img-box"><img src="./images/promo01.png" alt="프로모션1"></div>
+                    <h3>home</h3>
+                    <p class="lower-txt">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam, iure!</p>
+                </article>
+                <article>
+                    <div class="img-box"><img src="./images/promo02.png" alt="프로모션2"></div>
+                    <h3>we are</h3>
+                    <p class="lower-txt">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam, iure!</p>
+                </article>
+                <article>
+                    <div class="img-box"><img src="./images/promo03.png" alt="프로모션3"></div>
+                    <h3>work</h3>
+                    <p class="lower-txt">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam, iure!</p>
+                </article>
+                <article>
+                    <div class="img-box"><img src="./images/promo04.png" alt="프로모션4"></div>
+                    <h3>blog</h3>
+                    <p class="lower-txt">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam, iure!</p>
+                </article>
+            </div>   
         </section>
         <section class="sec work">
             <h2>work</h2>
