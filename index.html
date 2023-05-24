@@ -28,6 +28,9 @@
         .hide{
             display:none;
         }
+        .sec{            
+            padding:60px 20px;
+        }
 
         .wrap{            
             overflow:hidden;
@@ -88,9 +91,10 @@
             background:#3f51b5;
             text-indent:-9999px;
         }
-        .sec{            
-            padding:60px 20px;
+        .slider{
+            padding:0;
         }
+        
         .flex-box{
             display:flex;
             flex-flow:row wrap;
@@ -145,6 +149,71 @@
             color:#616161;
             text-align:center;
         }
+        .work{
+            padding-left:0;
+            padding-right:0;
+        }
+        .work h2{
+            margin-bottom:60px;
+        }
+        .work article{
+            overflow:hidden;
+            position:relative;
+            margin:0;
+        }        
+        .work article .img-box{            
+            width:100%;
+            height:auto;
+            margin:0;
+        }
+        .work article img{
+            height:auto;
+            width:100%;
+        }
+        .work article:hover img{
+            opacity:0.5;
+        }
+        .work article .img-box::after{
+            position:absolute;
+            left:0;
+            right:0;
+            top:0;
+            bottom:0;
+            background:#3f51b5;
+            content:'';
+            display:block;
+            opacity:0;
+            transition:0.3s;
+        }
+        .work article:hover .img-box::after{
+            opacity:0.8;
+        }
+
+        .work article h3,.work article p{
+            position:absolute;
+            left:2em;
+            top:-4em;
+            opacity:0;
+            font-weight:700;
+            font-size:18px;
+            color:#fff;
+            transition:0.3s;
+        }
+        .work article p{
+            padding-left:7px;
+            top:-2em;
+            font-weight:500;
+            font-size:14px;            
+        }
+        .work article:hover h3{
+            top:2em;
+            opacity:1;
+        }
+        .work article:hover p{
+            top:4em;
+            opacity:1;
+        }
+
 
 
 
@@ -181,7 +250,7 @@
         }
 
         @media (min-width:1200px){
-            .flex-box h2{
+            .sec h2{
                 width:40%;
                 text-align:left;
             }
