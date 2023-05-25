@@ -213,7 +213,23 @@
             top:4em;
             opacity:1;
         }
-
+        .blog article .img-box{
+            height:auto;
+            margin-bottom:0.5em;
+        }
+        .blog article .img-box img{
+            height:auto;
+            width:100%;
+        }
+        .blog article h3{
+            margin:0;
+            font-size:12px;
+            text-align:left;
+            color:#aaa;
+        }
+        .blog article p{
+            text-align:left;
+        }
 
 
 
@@ -246,6 +262,9 @@
             .work article{
                 width:50%;
             }
+            .blog article{
+                width:calc(33.3333% - 20px)
+            }
             
         }
 
@@ -265,6 +284,10 @@
             }
             .work article{
                 width:25%;
+            }
+            
+            .blog h2,.blog article{
+                width:calc(25% - 15px);
             }
         }
     </style>
@@ -373,7 +396,25 @@
 
         </section>
         <section class="sec blog">
-            <h2>blog</h2>
+            <div class="container flex-box">
+                <h2>blog</h2>
+                <article>
+                    <div class="img-box"><img src="./images/blog01.jpg" alt="블로그1"></div>
+                    <h3>oct 30, 2016</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                </article>
+                <article>
+                    <div class="img-box"><img src="./images/blog02.jpg" alt="블로그2"></div>
+                    <h3>OCT 30, 2016</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                </article>
+                <article>
+                    <div class="img-box"><img src="./images/blog03.jpg" alt="블로그3"></div>
+                    <h3>OCT 30, 2016</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                </article>
+            </div>
+            
         </section>
         <section class="sec contact">
             <h2>contact</h2>
