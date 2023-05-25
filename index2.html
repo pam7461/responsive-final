@@ -26,8 +26,15 @@
             font-size:1.8em;
             color:#3f51b5;            
         }
+
+
         .hide{
             display:none;
+        }
+        .clearfix::after{
+            content:'';
+            display:block;
+            clear:both;
         }
         .fleft{
             float:left;
@@ -201,29 +208,56 @@
                 <h2 class="tit-sec fleft col04 mr20">BLOG</h2>
                 <article class="fleft col04 mr20">
                     <div class="img-box"><img src="./images/blog01.jpg" alt="blog01"></div>
-                    <h3>OCT 30. 2023</h3>
+                    <h3 class="hide">아티클제목1</h3>
+                    <p>OCT 30. 2023</p>
                     <p>Lorem ipsum dolor sit amet.</p>
                 </article>
                 <article class="fleft col04 mr20">
                     <div class="img-box"><img src="./images/blog01.jpg" alt="blog01"></div>
-                    <h3>OCT 30. 2023</h3>
+                    <h3 class="hide">아티클제목2</h3>
+                    <p>OCT 30. 2023</p>
                     <p>Lorem ipsum dolor sit amet.</p>
                 </article>
                 <article class="fleft col04">
                     <div class="img-box"><img src="./images/blog01.jpg" alt="blog01"></div>
-                    <h3>OCT 30. 2023</h3>
+                    <h3 class="hide">아티클제목3</h3>
+                    <p>OCT 30. 2023</p>
                     <p>Lorem ipsum dolor sit amet.</p>
                 </article>
             </div>
         </section>
         <section class="sec contact">
-            <h2>섹션제목</h2>
+            <div class="container clearfix">
+                <h2 class="tit-sec fleft col04 mr20">CONTACT</h2>
+                <form action="#" class="fright col12">
+                    <div class="field clearfix">
+                        <div class="fleft col06">
+                            <label class="hide" for="name">name</label>
+                            <input type="text" name="name" id="name" placeholder="Name">
+                            <label class="hide" for="phone">phone</label>
+                            <input type="text" name="phone" id="phone" placeholder="Phone">
+                            <label class="hide" for="email">email address</label>
+                            <input type="email" name="email" id="email" placeholder="Email Address">
+                        </div>
+                        <div class="fright col06">
+                            <label class="hide" for="msg">Message</label>
+                            <textarea name="msg" id="msg"></textarea>
+                        </div>
+                    </div>
+                    <div class="send-box clearfix">
+                        <input type="submit" value="SEND MESSAGE" class="fright">
+                    </div>
+                </form>
+            </div>
         </section>
         <section class="sec map">
-            <h2>섹션제목</h2>
+            <div class="container">
+                <h2 class="hide">map</h2>
+                <iframe src="" frameborder="0">아이프래임</iframe>
+            </div>
         </section>
         <footer class="footer copyright">
-            <address>주소</address>
+            <address>INDIGO</address>
         </footer>
     </section>
     <script src="./js/default.js"></script>
