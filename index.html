@@ -62,7 +62,11 @@
             margin:0 auto;
         }
         .header{
-            position:relative;
+            position:fixed;
+            left:0;
+            right:0;
+            top:0;
+            z-index:100;
             display:flex;           
             justify-content:space-between;
             align-items:center;
@@ -88,7 +92,7 @@
             transition-duration:0.3s;
         }
         nav.active{
-            height:216px;
+            height:200px;
         }
         nav li{
             padding:10px 5%;
@@ -112,9 +116,13 @@
             text-indent:-9999px;
         }
         .slider{
+            margin-top:62px;
             padding:0;
         }
-        
+        .we-are{
+            position:relative;
+            z-index:1;
+        }
         .flex-box{
             display:flex;
             flex-flow:row wrap;
@@ -320,6 +328,9 @@
             .btn-nav{
                 display:none;
             }
+            .slider{
+                margin-top:84px;
+            }
             .flex-box article{
                 width:calc(25% - 15px);
                 margin-bottom:0;
@@ -377,18 +388,18 @@
             <h1 class="logo"><a href="./index.html">indigo</a></h1>
             <nav>
                 <ul>
-                    <li><a href="./index.html">home</a></li>
-                    <li><a href="#">we are</a></li>
-                    <li><a href="#">work</a></li>
-                    <li><a href="#">blog</a></li>
-                    <li><a href="#">contact us</a></li>
+                    <li><a href="#home">home</a></li>
+                    <li><a href="#we-are">we are</a></li>
+                    <li><a href="#work">work</a></li>
+                    <li><a href="#blog">blog</a></li>
+                    <li><a href="#contact">contact us</a></li>
                 </ul>
             </nav>
             <div class="btn-nav" onclick="navToggle();">
                 <span>내비버튼</span>
             </div>
         </header>
-        <section class="sec slider">
+        <section class="sec slider" id="home">
             <h2 class="hide">slider</h2>
             <div class="img-box">
                 <a href="#">
@@ -400,7 +411,7 @@
                 </a>
             </div>
         </section>
-        <section class="sec we-are under-line">            
+        <section class="sec we-are under-line" id="we-are">            
             <div class="container flex-box">
                 <h2>we are</h2>
                 <p class="lower-txt serif">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem, reiciendis facilis! Consectetur neque reiciendis, provident voluptatum aperiam minus! Blanditiis quod earum sint tempora voluptas ab illum labore at eos facilis!</p>
@@ -426,7 +437,7 @@
                 </article>
             </div>   
         </section>
-        <section class="sec work">
+        <section class="sec work" id="work">
             <div class="container">
                 <h2>work</h2>
             </div>
@@ -474,7 +485,7 @@
             </div>            
 
         </section>
-        <section class="sec blog under-line">
+        <section class="sec blog under-line" id="blog">
             <div class="container flex-box">
                 <h2>blog</h2>
                 <article>
@@ -495,7 +506,7 @@
             </div>
             
         </section>
-        <section class="sec contact">
+        <section class="sec contact" id="contact">
             <div class="container flex-box">
                 <h2>contact</h2>
                 <form action="#">
