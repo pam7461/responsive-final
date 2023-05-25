@@ -233,7 +233,6 @@
 
 
 
-
         @media (min-width:768px){
             .header{
                 height:84px;
@@ -284,10 +283,12 @@
             }
             .work article{
                 width:25%;
-            }
-            
-            .blog h2,.blog article{
+            }            
+            .blog h2,.blog article,.contact h2{
                 width:calc(25% - 15px);
+            }
+            .contact form{
+                width:calc(75% - 15px)
             }
         }
     </style>
@@ -417,7 +418,12 @@
             
         </section>
         <section class="sec contact">
-            <h2>contact</h2>
+            <div class="container flex-box">
+                <h2>contact</h2>
+                <form action="#">
+                    폼
+                </form>
+            </div>            
         </section>
         <section class="sec map">
             <h2>map</h2>
